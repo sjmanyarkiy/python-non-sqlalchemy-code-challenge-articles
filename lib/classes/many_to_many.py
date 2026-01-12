@@ -24,7 +24,7 @@ class Article:
     
     @author.setter
     def author(self, value):
-        if isinstance(self, Author):
+        if isinstance(value, Author):
             self._author = value
 
     @property
