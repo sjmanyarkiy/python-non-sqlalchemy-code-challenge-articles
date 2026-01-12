@@ -17,6 +17,24 @@ class Article:
             return
         if isinstance(value, str) and 5 <= len(value) <=50:
             self._title = value
+
+    @property
+    def author(self):
+        return self._author
+    
+    @author.setter
+    def author(self, value):
+        if isinstance(self, Author):
+            self._author = value
+
+    @property
+    def magazine(self):
+        return self._magazine
+    
+    @magazine.setter
+    def magazine(self, value):
+        if isinstance(self, Magazine):
+            self._magazine = value
         
 class Author:
     def __init__(self, name):
